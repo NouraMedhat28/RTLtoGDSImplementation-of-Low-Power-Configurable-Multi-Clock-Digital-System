@@ -1,8 +1,0 @@
-source 01_design_setup.tcl
-source 02_floorplanning.tcl
-source 03_power_planning.tcl
-source 04_placement.tcl
-source 05_cts.tcl
-source 06_spare_cells_insertion.tcl
-source 07_routing.tcl
-source 08_gds_generation.tcl
