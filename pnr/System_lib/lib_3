@@ -1,0 +1,172 @@
+$ 
+$$$$ Combo ITF $$$$
+$ 
+$ Cap Unit: 1e-12 F
+$ Res Unit: 1000 ohm
+$ 
+$ 
+$$ begin_min_ITF
+
+TECHNOLOGY = NangateOpenCellLibrary
+GLOBAL_TEMPERATURE = 25.0
+
+CONDUCTOR metal10 {THICKNESS= 2.0000
+    WMIN=0.8000   SMIN=0.8000 RPSQ=0.0300
+ }
+DIELECTRIC metal10_diel {THICKNESS=4.0000	ER=2.5 }
+CONDUCTOR metal9 {THICKNESS= 2.0000
+    WMIN=0.8000   SMIN=0.8000 RPSQ=0.0300
+ }
+DIELECTRIC metal9_diel {THICKNESS=4.0000	ER=2.5 }
+CONDUCTOR metal8 {THICKNESS= 0.8000
+    WMIN=0.4000   SMIN=0.4000 RPSQ=0.0750
+ }
+DIELECTRIC metal8_diel {THICKNESS=1.6200	ER=2.5 }
+CONDUCTOR metal7 {THICKNESS= 0.8000
+    WMIN=0.4000   SMIN=0.4000 RPSQ=0.0750
+ }
+DIELECTRIC metal7_diel {THICKNESS=1.6200	ER=2.5 }
+CONDUCTOR metal6 {THICKNESS= 0.2800
+    WMIN=0.1400   SMIN=0.1400 RPSQ=0.2100
+ }
+DIELECTRIC metal6_diel {THICKNESS=0.5700	ER=2.5 }
+CONDUCTOR metal5 {THICKNESS= 0.2800
+    WMIN=0.1400   SMIN=0.1400 RPSQ=0.2100
+ }
+DIELECTRIC metal5_diel {THICKNESS=0.5700	ER=2.5 }
+CONDUCTOR metal4 {THICKNESS= 0.2800
+    WMIN=0.1400   SMIN=0.1400 RPSQ=0.2100
+ }
+DIELECTRIC metal4_diel {THICKNESS=0.5700	ER=2.5 }
+CONDUCTOR metal3 {THICKNESS= 0.1400
+    WMIN=0.0700   SMIN=0.0700 RPSQ=0.2500
+ }
+DIELECTRIC metal3_diel {THICKNESS=0.2600	ER=2.5 }
+CONDUCTOR metal2 {THICKNESS= 0.1400
+    WMIN=0.0700   SMIN=0.0700 RPSQ=0.2500
+ }
+DIELECTRIC metal2_diel {THICKNESS=0.2600	ER=2.5 }
+CONDUCTOR metal1 {THICKNESS= 0.1300
+    WMIN=0.0650   SMIN=0.0650 RPSQ=0.3800
+ }
+DIELECTRIC metal1_diel {THICKNESS=0.2500	ER=2.5 }
+CONDUCTOR poly {THICKNESS= 0.0850
+    WMIN=0.0500   SMIN=0.0750 RPSQ=7.8000
+ }
+
+DIELECTRIC field_base_diel {THICKNESS=0.1000	ER=3.9 }
+DIELECTRIC field_active_diel {THICKNESS=0.1000	ER=3.9 }
+DIELECTRIC poly_diel {THICKNESS=0.1700	ER=2.5 }
+
+VIA polyCont {FROM=poly TO=metal1 AREA=0.0025 RPV=25.6}
+VIA via1 {FROM=metal1 TO=metal2 AREA=0.0049 RPV=6}
+VIA via2 {FROM=metal2 TO=metal3 AREA=0.0049 RPV=5}
+VIA via3 {FROM=metal3 TO=metal4 AREA=0.0049 RPV=5}
+VIA via4 {FROM=metal4 TO=metal5 AREA=0.0196 RPV=3}
+VIA via5 {FROM=metal5 TO=metal6 AREA=0.0196 RPV=3}
+VIA via6 {FROM=metal6 TO=metal7 AREA=0.0196 RPV=3}
+VIA via7 {FROM=metal7 TO=metal8 AREA=0.16 RPV=1}
+VIA via8 {FROM=metal8 TO=metal9 AREA=0.16 RPV=1}
+VIA via9 {FROM=metal9 TO=metal10 AREA=0.64 RPV=0.5}
+
+
+$$ end_min_ITF
+$ 
+$$ begin_max_ITF
+
+TECHNOLOGY = NangateOpenCellLibrary
+GLOBAL_TEMPERATURE = 25.0
+
+CONDUCTOR metal10 {THICKNESS= 2.0000
+    WMIN=0.8000   SMIN=0.8000 RPSQ=0.0300
+ }
+DIELECTRIC metal10_diel {THICKNESS=4.0000	ER=2.5 }
+CONDUCTOR metal9 {THICKNESS= 2.0000
+    WMIN=0.8000   SMIN=0.8000 RPSQ=0.0300
+ }
+DIELECTRIC metal9_diel {THICKNESS=4.0000	ER=2.5 }
+CONDUCTOR metal8 {THICKNESS= 0.8000
+    WMIN=0.4000   SMIN=0.4000 RPSQ=0.0750
+ }
+DIELECTRIC metal8_diel {THICKNESS=1.6200	ER=2.5 }
+CONDUCTOR metal7 {THICKNESS= 0.8000
+    WMIN=0.4000   SMIN=0.4000 RPSQ=0.0750
+ }
+DIELECTRIC metal7_diel {THICKNESS=1.6200	ER=2.5 }
+CONDUCTOR metal6 {THICKNESS= 0.2800
+    WMIN=0.1400   SMIN=0.1400 RPSQ=0.2100
+ }
+DIELECTRIC metal6_diel {THICKNESS=0.5700	ER=2.5 }
+CONDUCTOR metal5 {THICKNESS= 0.2800
+    WMIN=0.1400   SMIN=0.1400 RPSQ=0.2100
+ }
+DIELECTRIC metal5_diel {THICKNESS=0.5700	ER=2.5 }
+CONDUCTOR metal4 {THICKNESS= 0.2800
+    WMIN=0.1400   SMIN=0.1400 RPSQ=0.2100
+ }
+DIELECTRIC metal4_diel {THICKNESS=0.5700	ER=2.5 }
+CONDUCTOR metal3 {THICKNESS= 0.1400
+    WMIN=0.0700   SMIN=0.0700 RPSQ=0.2500
+ }
+DIELECTRIC metal3_diel {THICKNESS=0.2600	ER=2.5 }
+CONDUCTOR metal2 {THICKNESS= 0.1400
+    WMIN=0.0700   SMIN=0.0700 RPSQ=0.2500
+ }
+DIELECTRIC metal2_diel {THICKNESS=0.2600	ER=2.5 }
+CONDUCTOR metal1 {THICKNESS= 0.1300
+    WMIN=0.0650   SMIN=0.0650 RPSQ=0.3800
+ }
+DIELECTRIC metal1_diel {THICKNESS=0.2500	ER=2.5 }
+CONDUCTOR poly {THICKNESS= 0.0850
+    WMIN=0.0500   SMIN=0.0750 RPSQ=7.8000
+ }
+
+DIELECTRIC field_base_diel {THICKNESS=0.1000	ER=3.9 }
+DIELECTRIC field_active_diel {THICKNESS=0.1000	ER=3.9 }
+DIELECTRIC poly_diel {THICKNESS=0.1700	ER=2.5 }
+
+VIA polyCont {FROM=poly TO=metal1 AREA=0.0025 RPV=25.6}
+VIA via1 {FROM=metal1 TO=metal2 AREA=0.0049 RPV=6}
+VIA via2 {FROM=metal2 TO=metal3 AREA=0.0049 RPV=5}
+VIA via3 {FROM=metal3 TO=metal4 AREA=0.0049 RPV=5}
+VIA via4 {FROM=metal4 TO=metal5 AREA=0.0196 RPV=3}
+VIA via5 {FROM=metal5 TO=metal6 AREA=0.0196 RPV=3}
+VIA via6 {FROM=metal6 TO=metal7 AREA=0.0196 RPV=3}
+VIA via7 {FROM=metal7 TO=metal8 AREA=0.16 RPV=1}
+VIA via8 {FROM=metal8 TO=metal9 AREA=0.16 RPV=1}
+VIA via9 {FROM=metal9 TO=metal10 AREA=0.64 RPV=0.5}
+
+
+$$ end_max_ITF
+$ 
+$$ begin_mapping_file
+$ conducting_layers
+$   poly poly
+$   metal1  metal1
+$   metal2  metal2
+$   metal3  metal3
+$   metal4  metal4
+$   metal5  metal5
+$   metal6  metal6
+$   metal7  metal7
+$   metal8  metal8
+$   metal9  metal9
+$   metal10  metal10
+$ 
+$ via_layers
+$   via1   via1
+$   via2   via2
+$   via3   via3
+$   via4   via4
+$   via5   via5
+$   via6   via6
+$   via7   via7
+$   via8   via8
+$   via9   via9
+$ 
+$ marker_layers
+$ 
+$ remove_layers
+$ 
+$ 
+$$ end_mapping_file

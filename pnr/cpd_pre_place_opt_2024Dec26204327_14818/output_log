@@ -1,0 +1,362 @@
+Start CPD check: ::check_tlu_plus_files 
+
+Sanity check for TLU+ vs MW-Tech files:
+ max_tlu+: ../std_cells/NanGate/TLUPlus/NangateOpenCellLibrary.tluplus
+ min_tlu+: ../std_cells/NanGate/TLUPlus/NangateOpenCellLibrary.tluplus
+ mapping_file: ../std_cells/NanGate/tech/NangateOpenCellLibrary.map
+ max_emul_tlu+: **NONE**
+ min_emul_tlu+: **NONE**
+ MW design lib: System_lib
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+Warning: minWidth value of layer "metal1" (metal1) does not match : ITF (0.065) vs MW-tech (0.070). (TLUP-004)
+----------------- Check Ends ------------------
+1
+End CPD check: ::check_tlu_plus_files
+Start CPD check: ::get_placement_area 
+10.000 10.000 210.070 210.200
+End CPD check: ::get_placement_area
+Start CPD check: report_routing_metal_info 
+Ignored layers in congestion analysis and RC estimation: metal7 metal8 metal9 metal10 
+
+Min_routing_layer: metal1
+Max_routing_layer: metal6
+Information: Report design vs library layers and preferred routing directions. (PNR-164)
+ 
+****************************************
+Report : Layers
+Design : SystemTop
+Version: L-2016.03-SP1
+Date   : Thu Dec 26 20:43:27 2024
+****************************************
+
+Layer Name                   Library             Design              Tool understands
+metal1                       Horizontal          Horizontal          Horizontal
+metal2                       Vertical            Vertical            Vertical
+metal3                       Horizontal          Horizontal          Horizontal
+metal4                       Vertical            Vertical            Vertical
+metal5                       Horizontal          Horizontal          Horizontal
+metal6                       Vertical            Vertical            Vertical
+metal7                       Horizontal          Horizontal          Horizontal
+metal8                       Vertical            Vertical            Vertical
+metal9                       Horizontal          Horizontal          Horizontal
+metal10                      Vertical            Vertical            Vertical
+
+Information: Report track info.  (PNR-165)
+****************************************
+Report track
+Design : SystemTop
+Version: L-2016.03-SP1
+Date   : Thu Dec 26 20:43:27 2024
+****************************************
+Layer          Direction     Start         Tracks    Pitch          Attr
+------------------------------------------------------------------------
+Attributes :
+         usr : User defined
+         def : DEF defined
+
+metal1             Y         0.1300         1572      0.1400          
+metal2             Y         0.1300         1572      0.1400          
+metal2             X         0.2150         1157      0.1900          
+metal1             X         0.2150         1157      0.1900          
+metal3             X         0.2150         1157      0.1900          
+metal3             Y         0.1300         1572      0.1400          
+metal2             Y         0.1300         1572      0.1400          
+metal4             Y         0.1300         1572      0.1400          
+metal4             X         0.2950         785       0.2800          
+metal3             X         0.2950         785       0.2800          
+metal5             X         0.2950         785       0.2800          
+metal5             Y         0.2700         785       0.2800          
+metal4             Y         0.2700         785       0.2800          
+metal6             Y         0.2700         785       0.2800          
+metal6             X         0.2950         785       0.2800          
+metal5             X         0.2950         785       0.2800          
+metal7             X         0.2950         785       0.2800          
+metal7             Y         0.4700         275       0.8000          
+metal6             Y         0.4700         275       0.8000          
+metal8             Y         0.4700         275       0.8000          
+metal8             X         0.4950         274       0.8000          
+metal7             X         0.4950         274       0.8000          
+metal9             X         0.4950         274       0.8000          
+metal9             Y         2.0700         136       1.6000          
+metal8             Y         2.0700         136       1.6000          
+metal10            Y         2.0700         136       1.6000          
+metal10            X         2.0950         136       1.6000          
+metal9             X         2.0950         136       1.6000          
+1
+End CPD check: report_routing_metal_info
+Start CPD check: check_track_and_unit 
+
+End CPD check: check_track_and_unit
+Start CPD check: check_layer_direction 
+
+End CPD check: check_layer_direction
+Start CPD check: check_physical_only_ports 
+Warning: No port objects matched '*' (SEL-004)
+[]
+End CPD check: check_physical_only_ports
+Start CPD check: ::check_database 
+************************************************************
+CHECK_DATABASE RESULTS FOR CELL : SystemTopEstimateArea.CEL
+************************************************************
+MWUHIER: Checking for hierarchical internal netlist and flat internal netlist consistency ... 
+MWUHIER: Done with checking hierarchical internal netlist and flat internal netlist consistency. 
+Information: MWUHIER: Number of errors = 0 (MW-348)
+End PG consistent checking.. PG_Pass
+Information: Performing CEL netlist consistency check. (MWDC-118)
+Information: CEL consistency check PASSED. (MWDC-119)
+
+Start UPF checking.
+No UPF infomation. Finish UPF checking.
+1
+End CPD check: ::check_database
+Start CPD check: report_taint -dump_errors 
+
+****************************************
+  Report : Suggestions
+  Design : SystemTop
+  Version: L-2016.03-SP1
+  Date   : Thu Dec 26 20:43:27 2024
+****************************************
+
+Information: No suggestion for current design. (PSYN-1068)
+
+1
+End CPD check: report_taint -dump_errors
+Start CPD check: check_for_HFN_dont_touch_nets 
+
+End CPD check: check_for_HFN_dont_touch_nets
+Start CPD check: check_block_abstraction -stage pre_place_opt 
+Information: No blocks with abstraction information found
+1
+End CPD check: check_block_abstraction -stage pre_place_opt
+Start CPD check: check_placement_utilization_violation 
+ 
+****************************************
+  Report : Chip Summary
+  Design : SystemTop
+  Version: L-2016.03-SP1
+  Date   : Thu Dec 26 20:43:28 2024
+****************************************
+Std cell utilization: 8.46%  (12740/(150579-0))
+(Non-fixed + Fixed)
+Std cell utilization: 8.46%  (12740/(150579-0))
+(Non-fixed only)
+Chip area:            150579   sites, bbox (10.00 10.00 210.07 210.20) um
+Std cell area:        12740    sites, (non-fixed:12740  fixed:0)
+                      1500     cells, (non-fixed:1500   fixed:0)
+Macro cell area:      0        sites
+                      0        cells
+Placement blockages:  0        sites, (excluding fixed std cells)
+                      0        sites, (include fixed std cells & chimney area)
+                      0        sites, (complete p/g net blockages)
+Routing blockages:    0        sites, (partial p/g net blockages)
+                      0        sites, (routing blockages and signal pre-route)
+Lib cell count:       35 
+Avg. std cell width:  1.27 um 
+Site array:           unit     (width: 0.19 um, height: 1.40 um, rows: 143)
+Physical DB scale:    2000 db_unit = 1 um 
+
+ 
+****************************************
+  Report : pnet options
+  Design : SystemTop
+  Version: L-2016.03-SP1
+  Date   : Thu Dec 26 20:43:28 2024
+****************************************
+
+
+--------------------------------------------------------------------
+Layer      Blockage   Min_width   Min_height   Via_additive     Density
+--------------------------------------------------------------------
+metal1     none          ---         ---       via additive      ---
+metal2     none          ---         ---       via additive      ---
+metal3     none          ---         ---       via additive      ---
+metal4     none          ---         ---       via additive      ---
+metal5     none          ---         ---       via additive      ---
+metal6     none          ---         ---       via additive      ---
+metal7     none          ---         ---       via additive      ---
+metal8     none          ---         ---       via additive      ---
+metal9     none          ---         ---       via additive      ---
+metal10    none          ---         ---       via additive      ---
+
+**********************************
+      Sub-Region Utilization      
+**********************************
+Number of regions with placement utilization 0 - 0.125 is 701 (83.35%)
+Number of regions with placement utilization 0.125 - 0.25 is 140 (16.65%)
+Number of regions with placement utilization 0.25 - 0.375 is 0 (0.00%)
+Number of regions with placement utilization 0.375 - 0.5 is 0 (0.00%)
+Number of regions with placement utilization 0.5 - 0.625 is 0 (0.00%)
+Number of regions with placement utilization 0.625 - 0.75 is 0 (0.00%)
+Number of regions with placement utilization 0.75 - 0.875 is 0 (0.00%)
+Number of regions with placement utilization 0.875 - 1 is 0 (0.00%)
+1
+
+1
+End CPD check: check_placement_utilization_violation
+Start CPD check: cpd_check_tie_connection 
+Warning: Cell contains tie connections which are not connected to real PG. (MW-349)
+0
+End CPD check: cpd_check_tie_connection
+Start CPD check: cpd_check_cells_restrictions 
+0
+End CPD check: cpd_check_cells_restrictions
+Start CPD check: check_bound_utilization 
+Checking Bounds Utilization:
+Warning: Nothing implicitly matched '*' (SEL-003)
+0
+End CPD check: check_bound_utilization
+Start CPD check: check_bounds 
+Warning: Nothing implicitly matched '*' (SEL-003)
+
+End CPD check: check_bounds
+Start CPD check: cpd_check_bounds_overlap 
+
+End CPD check: cpd_check_bounds_overlap
+Start CPD check: check_va_utilization 
+Checking Voltage Area Utilization:
+Warning: No voltage_area objects matched '*' (SEL-004)
+
+End CPD check: check_va_utilization
+Start CPD check: placement_check 
+Error: Initial placement includes scan chains but no scan DEF information. Aborting. Issue "man PSYN-1072" for information on avoiding this. (PSYN-1072)
+Warning: ICC has suggestions for improving your design.  Use "report_suggestions" for details.  (PSYN-1067)
+
+  Loading design 'SystemTop'
+
+
+
+
+
+  Total moveable cell area: 3388.8
+  Total fixed cell area: 0.0
+  Total physical cell area: 3388.8
+  Core area: (20000 20000 420140 420400)
+Warning: ICC has suggestions for improving your design.  Use "report_suggestions" for details.  (PSYN-1067)
+false
+End CPD check: placement_check
+Start CPD check: report_fp_placement 
+Reference Point: Lower Left-hand corner of Core Base Array
+Number of plan group pins = 0
+  2 blocks freed
+  0 bytes freed
+*********************************************
+Report     : Virtual Flat Placement
+Design     : SystemTopEstimateArea
+Version    : L-2016.03-SP1
+Date       : Thu Dec 26 20:43:28 2024
+*********************************************
+
+Total wirelength: 48507.55
+Number of 100x100 tracks cell density regions: 196
+Number of low (< 10%) cell density regions: 187 (0.954%)
+Number of high (> 200%) cell density regions: 0 (0.000%)
+Maximum cell density: 14.05% (at 143 90 156 103)
+Checking hard macro to hard macro overlaps...
+Number of hard macro to hard macro overlaps: 0
+Checking hard macro to std cell overlaps...
+Number of hard macro to std cell overlaps: 0
+Checking plan group to plan group overlaps...
+Number of plan group to plan group overlaps: 0
+Number of TL cells overlapping PG: 0
+Number of cells violating core area: 0
+Total number of cells violating plan group or core area: 0
+1
+End CPD check: report_fp_placement
+Start CPD check: ::check_physical_constraints 
+
+  Loading design 'SystemTop'
+
+
+ Physical Library: /home/IC/Desktop/FinalProject/pnr/System_lib
+
+ Routing layer : metal1    width: 140    pitch: 280   space: 130
+
+ Routing Layer : metal1 Resistance : 0.00038 Capacitance : 0.000859
+
+ Routing layer : metal2    width: 140    pitch: 380   space: 140
+
+ Routing Layer : metal2 Resistance : 0.00025 Capacitance : 0.00076
+
+ Routing layer : metal3    width: 140    pitch: 280   space: 140
+
+ Routing Layer : metal3 Resistance : 0.00025 Capacitance : 0.000747
+
+ Routing layer : metal4    width: 280    pitch: 560   space: 280
+
+ Routing Layer : metal4 Resistance : 0.00021 Capacitance : 0.000462
+
+ Routing layer : metal5    width: 280    pitch: 560   space: 280
+
+ Routing Layer : metal5 Resistance : 0.00021 Capacitance : 4.8e-05
+
+ Routing layer : metal6    width: 280    pitch: 560   space: 280
+
+ Routing Layer : metal6 Resistance : 0.00021 Capacitance : 0.000351
+
+ Routing layer : metal7    width: 800    pitch: 1600   space: 800
+
+ Routing Layer : metal7 Resistance : 7.5e-05 Capacitance : 0.000171
+
+ Routing layer : metal8    width: 800    pitch: 1600   space: 800
+
+ Routing Layer : metal8 Resistance : 7.5e-05 Capacitance : 0.000125
+
+ Routing layer : metal9    width: 1600    pitch: 3200   space: 1600
+
+ Routing Layer : metal9 Resistance : 3e-05 Capacitance : 8.1e-05
+
+ Routing layer : metal10    width: 1600    pitch: 3200   space: 1600
+
+ Routing Layer : metal10 Resistance : 3e-05 Capacitance : 6.1e-05
+
+Warning: Resistance of layer metal1 varies more than the specified factor (5.00) from layer metal9. (PSYN-260)
+Warning: Capacitance of layer metal1 varies more than the specified factor (5.00) from layer metal5. (PSYN-261)
+Warning: Resistance of layer metal2 varies more than the specified factor (5.00) from layer metal9. (PSYN-260)
+Warning: Capacitance of layer metal2 varies more than the specified factor (5.00) from layer metal5. (PSYN-261)
+Warning: Resistance of layer metal3 varies more than the specified factor (5.00) from layer metal9. (PSYN-260)
+Warning: Capacitance of layer metal3 varies more than the specified factor (5.00) from layer metal5. (PSYN-261)
+Warning: Resistance of layer metal4 varies more than the specified factor (5.00) from layer metal9. (PSYN-260)
+Warning: Capacitance of layer metal4 varies more than the specified factor (5.00) from layer metal5. (PSYN-261)
+Warning: Resistance of layer metal5 varies more than the specified factor (5.00) from layer metal9. (PSYN-260)
+Warning: Resistance of layer metal6 varies more than the specified factor (5.00) from layer metal9. (PSYN-260)
+Warning: Capacitance of layer metal6 varies more than the specified factor (5.00) from layer metal5. (PSYN-261)
+
+ Physical Library: /home/IC/Desktop/FinalProject/std_cells/NanGate/NangateOpenCellLibraryMW
+
+
+Total Bounds:0 Group Bounds:0 Move Bounds:0
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 10 routable metal layers
+    Top most routable layer is set to be metal6
+    This is considered as a 6-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 143 horizontal rows
+    20 pre-routes for placement blockage/checking
+    20 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+
+The maximum cell width in library is 4.750 um (e.g. 25 sites)
+
+There are no narrow placement areas less than 25 sites
+1
+End CPD check: ::check_physical_constraints

@@ -1,0 +1,5 @@
+Ignored layers in congestion analysis and RC estimation: metal7 metal8 metal9 metal10 
+
+Min_routing_layer: metal1
+Max_routing_layer: metal6
+1

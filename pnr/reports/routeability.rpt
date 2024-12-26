@@ -1,0 +1,34 @@
+
+Cell SystemTopEstimateArea.err existed already. Replace it ...
+Warning: Cell contains tie connections which are not connected to real PG. (MW-349)
+
+============================================
+==        Check Pin-Spot Min-Grid         ==
+============================================
+
+
+============================================
+==         Check Pin out of bound         ==
+============================================
+
+
+No out-of-bound error found
+
+============================================
+==             Check Min-Grid             ==
+============================================
+
+No min-grid error found
+
+============================================
+==        Check for blocked ports         ==
+============================================
+
+No blocked port was detected
+
+[        CHECK DESIGN] CPU = 0:00:00, Elapsed = 0:00:00
+
+[        CHECK DESIGN] Peak Memory =    245M Data =      9M
+
+Update error cell ...
+1

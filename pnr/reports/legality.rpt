@@ -1,0 +1,58 @@
+
+  Loading design 'SystemTop'
+
+
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 10 routable metal layers
+    Top most routable layer is set to be metal6
+    This is considered as a 6-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 143 horizontal rows
+    20 pre-routes for placement blockage/checking
+    20 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+Warning: Die area is not integer multiples of min site height (2800), object's width and height(440140,440400). (PSYN-523)
+Warning: Die area is not integer multiples of min site width (380), object's width and height(440140,440400). (PSYN-523)
+
+**************************************************** 
+Check_legality: Report for Fixed Placement Cells
+Information: Use the -verbose option to get details about the legality violations. (PSYN-054)
+**************************************************** 
+(fixed placement) Cells Not on Row            : 0
+(fixed placement) Cell Overlaps               : 0
+(fixed placement) Cells overlapping blockages : 0
+(fixed placement) Orientation Violations      : 0
+(fixed placement) Site Violations             : 0
+(fixed placement) Power Strap Violations      : 0
+****************************************************** 
+
+****************************************************** 
+Check_legality: Report for Non-fixed Placement Cells
+Information: Use the -verbose option to get details about the legality violations. (PSYN-054)
+****************************************************** 
+Number of Cells Not on Row            : 0
+Number of Cell Overlaps               : 0
+Number of Cells overlapping blockages : 0
+Number of Orientation Violations      : 0
+Number of Site Violations             : 0
+Number of Power Strap Violations      : 0
+******************************************** 
+
+  Total moveable cell area: 3406.4
+  Total fixed cell area: 0.0
+  Total physical cell area: 3406.4
+  Core area: (20000 20000 420140 420400)
+1

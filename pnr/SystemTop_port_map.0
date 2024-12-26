@@ -1,0 +1,117 @@
+set_user_match   -inverted   $svf_ref/SystemTop/UART_TOP/TX_D_VLD   $svf_impl/SystemTop/UART_TOP/TX_D_VLD
+set_user_match   -inverted   $svf_ref/SystemTop/UART_TOP/UART_TX_Top/DataValid   $svf_impl/SystemTop/UART_TOP/UART_TX_Top/DataValid
+set_user_match   -inverted   $svf_ref/SystemTop/UART_TOP/UART_TX_Top/ParityCalcTop/DataValid   $svf_impl/SystemTop/UART_TOP/UART_TX_Top/ParityCalcTop/DataValid
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/EN   $svf_impl/SystemTop/DataSyncToTX/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit0/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit0/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit1/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit1/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit2/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit2/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit3/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit3/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit4/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit4/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit5/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit5/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit6/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit6/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToTX/SyncBit7/EN   $svf_impl/SystemTop/DataSyncToTX/SyncBit7/EN
+guide_constraints -body { DataSyncToTX/SyncBit2 } -equivalent { DataSyncToTX/SyncBit2/EN  ~ DataSyncToTX/SyncBit2/IN0 }
+guide_constraints -body { DataSyncToTX } -equivalent { DataSyncToTX/EN  ~ DataSyncToTX/IN0 ~ DataSyncToTX/IN1 ~ DataSyncToTX/IN2 ~ DataSyncToTX/IN3 ~ DataSyncToTX/IN4 ~ DataSyncToTX/IN5 ~ DataSyncToTX/IN6 ~ DataSyncToTX/IN7 }
+guide_constraints -body { DataSyncToTX/SyncBit3 } -equivalent { DataSyncToTX/SyncBit3/EN  ~ DataSyncToTX/SyncBit3/IN0 }
+guide_constraints -body { DataSyncToTX/SyncBit4 } -equivalent { DataSyncToTX/SyncBit4/EN  ~ DataSyncToTX/SyncBit4/IN0 }
+guide_constraints -body { UART_TOP/UART_TX_Top } -equivalent { UART_TOP/UART_TX_Top/DataValid  ~ UART_TOP/UART_TX_Top/IN0 ~ UART_TOP/UART_TX_Top/IN1 }
+guide_constraints -body { UART_TOP } -equivalent { UART_TOP/TX_D_VLD  ~ UART_TOP/IN0 ~ UART_TOP/IN1 }
+guide_constraints -body { DataSyncToTX/SyncBit6 } -equivalent { DataSyncToTX/SyncBit6/EN  ~ DataSyncToTX/SyncBit6/IN0 }
+guide_constraints -body { DataSyncToTX/SyncBit5 } -equivalent { DataSyncToTX/SyncBit5/EN  ~ DataSyncToTX/SyncBit5/IN0 }
+guide_constraints -body { DataSyncToTX/SyncBit7 } -equivalent { DataSyncToTX/SyncBit7/EN  ~ DataSyncToTX/SyncBit7/IN0 }
+guide_constraints -body { DataSyncToTX/SyncBit1 } -equivalent { DataSyncToTX/SyncBit1/EN  ~ DataSyncToTX/SyncBit1/IN0 }
+guide_constraints -body { DataSyncToTX/SyncBit0 } -equivalent { DataSyncToTX/SyncBit0/EN  ~ DataSyncToTX/SyncBit0/IN0 }
+set_user_match   -inverted   $svf_ref/SystemTop/UART_TOP/UART_RX_TOP/FSMTop/OutData   $svf_impl/SystemTop/UART_TOP/UART_RX_TOP/FSMTop/OutData
+set_user_match   -inverted   $svf_ref/SystemTop/UART_TOP/UART_RX_TOP/DeserializerTop/OutData   $svf_impl/SystemTop/UART_TOP/UART_RX_TOP/DeserializerTop/OutData
+set_user_match   -inverted   $svf_ref/SystemTop/REF_RST_SCAN_MUX/OUT   $svf_impl/SystemTop/REF_RST_SCAN_MUX/OUT
+guide_constraints -body { RegisterFileTop } -equivalent { RegisterFileTop/RST  ~ RegisterFileTop/IN0   RegisterFileTop/IN1 ~ RegisterFileTop/IN2 }
+guide_constraints -body { SystemControlTop } -equivalent { SystemControlTop/RST    SystemControlTop/IN0 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit7 } -equivalent { DataSyncToSysCtrl/SyncBit7/RST    DataSyncToSysCtrl/SyncBit7/IN0 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit4 } -equivalent { DataSyncToSysCtrl/SyncBit4/RST    DataSyncToSysCtrl/SyncBit4/IN0 }
+guide_constraints -body { DataSyncToSysCtrl } -equivalent { DataSyncToSysCtrl/DestRST  ~ DataSyncToSysCtrl/IN0 }
+set_user_match   -inverted   $svf_ref/SystemTop/UART_RST_SCAN_MUX/OUT   $svf_impl/SystemTop/UART_RST_SCAN_MUX/OUT
+set_user_match   -inverted   $svf_ref/SystemTop/SystemControlTop/RX_D_VLD   $svf_impl/SystemTop/SystemControlTop/RX_D_VLD
+set_user_match   -inverted   $svf_ref/SystemTop/SystemControlTop/CTRL_RX_TOP/RX_D_VLD   $svf_impl/SystemTop/SystemControlTop/CTRL_RX_TOP/RX_D_VLD
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit0/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit0/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit1/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit1/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit2/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit2/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit3/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit3/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit4/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit4/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit5/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit5/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit6/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit6/EN
+set_user_match   -inverted   $svf_ref/SystemTop/DataSyncToSysCtrl/SyncBit7/EN   $svf_impl/SystemTop/DataSyncToSysCtrl/SyncBit7/EN
+guide_constraints -body { SystemControlTop/CTRL_RX_TOP } -equivalent { SystemControlTop/CTRL_RX_TOP/RX_D_VLD  ~ SystemControlTop/CTRL_RX_TOP/IN0 }
+guide_constraints -body { SystemControlTop } -equivalent { SystemControlTop/RX_D_VLD  ~ SystemControlTop/IN1 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit0 } -equivalent { DataSyncToSysCtrl/SyncBit0/EN  ~ DataSyncToSysCtrl/SyncBit0/IN0 }
+guide_constraints -body { DataSyncToSysCtrl } -equivalent { DataSyncToSysCtrl/EN  ~ DataSyncToSysCtrl/IN1 ~ DataSyncToSysCtrl/IN2 ~ DataSyncToSysCtrl/IN3 ~ DataSyncToSysCtrl/IN4 ~ DataSyncToSysCtrl/IN5 ~ DataSyncToSysCtrl/IN6 ~ DataSyncToSysCtrl/IN7 ~ DataSyncToSysCtrl/IN8 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit5 } -equivalent { DataSyncToSysCtrl/SyncBit5/EN  ~ DataSyncToSysCtrl/SyncBit5/IN0 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit6 } -equivalent { DataSyncToSysCtrl/SyncBit6/EN  ~ DataSyncToSysCtrl/SyncBit6/IN0 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit7 } -equivalent { DataSyncToSysCtrl/SyncBit7/EN  ~ DataSyncToSysCtrl/SyncBit7/IN1 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit1 } -equivalent { DataSyncToSysCtrl/SyncBit1/EN  ~ DataSyncToSysCtrl/SyncBit1/IN0 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit4 } -equivalent { DataSyncToSysCtrl/SyncBit4/EN  ~ DataSyncToSysCtrl/SyncBit4/IN1 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit2 } -equivalent { DataSyncToSysCtrl/SyncBit2/EN  ~ DataSyncToSysCtrl/SyncBit2/IN0 }
+guide_constraints -body { DataSyncToSysCtrl/SyncBit3 } -equivalent { DataSyncToSysCtrl/SyncBit3/EN  ~ DataSyncToSysCtrl/SyncBit3/IN0 }
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/a[0]   $svf_impl/SystemTop/ALUTop/div_36/a[0]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/A[0]   $svf_impl/SystemTop/ALUTop/sub_28/A[0]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[0]   $svf_impl/SystemTop/ALUTop/mult_32/A[0]
+guide_constraints -body { ALUTop/sub_28 } -equivalent { ALUTop/sub_28/A[0]  ~ ALUTop/sub_28/IN0 }
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[1]   $svf_impl/SystemTop/ALUTop/mult_32/A[1]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[2]   $svf_impl/SystemTop/ALUTop/mult_32/A[2]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[3]   $svf_impl/SystemTop/ALUTop/mult_32/A[3]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[4]   $svf_impl/SystemTop/ALUTop/mult_32/A[4]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[5]   $svf_impl/SystemTop/ALUTop/mult_32/A[5]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[6]   $svf_impl/SystemTop/ALUTop/mult_32/A[6]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/A[7]   $svf_impl/SystemTop/ALUTop/mult_32/A[7]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[0]   $svf_impl/SystemTop/ALUTop/div_36/b[0]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[0]   $svf_impl/SystemTop/ALUTop/sub_28/B[0]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[0]   $svf_impl/SystemTop/ALUTop/mult_32/B[0]
+guide_constraints -body { ALUTop/sub_28 } -equivalent { ALUTop/sub_28/B[0]  ~ ALUTop/sub_28/IN1 }
+guide_constraints -body { ALUTop/div_36 } -equivalent { ALUTop/div_36/b[0]  ~ ALUTop/div_36/IN0 }
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[1]   $svf_impl/SystemTop/ALUTop/div_36/b[1]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[1]   $svf_impl/SystemTop/ALUTop/sub_28/B[1]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[1]   $svf_impl/SystemTop/ALUTop/mult_32/B[1]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[2]   $svf_impl/SystemTop/ALUTop/div_36/b[2]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[2]   $svf_impl/SystemTop/ALUTop/sub_28/B[2]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[2]   $svf_impl/SystemTop/ALUTop/mult_32/B[2]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[3]   $svf_impl/SystemTop/ALUTop/div_36/b[3]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[3]   $svf_impl/SystemTop/ALUTop/sub_28/B[3]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[3]   $svf_impl/SystemTop/ALUTop/mult_32/B[3]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[4]   $svf_impl/SystemTop/ALUTop/div_36/b[4]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[4]   $svf_impl/SystemTop/ALUTop/sub_28/B[4]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[4]   $svf_impl/SystemTop/ALUTop/mult_32/B[4]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[5]   $svf_impl/SystemTop/ALUTop/div_36/b[5]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[5]   $svf_impl/SystemTop/ALUTop/sub_28/B[5]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[5]   $svf_impl/SystemTop/ALUTop/mult_32/B[5]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[6]   $svf_impl/SystemTop/ALUTop/div_36/b[6]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[6]   $svf_impl/SystemTop/ALUTop/sub_28/B[6]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[6]   $svf_impl/SystemTop/ALUTop/mult_32/B[6]
+guide_constraints -body { ALUTop/div_36 } -equivalent { ALUTop/div_36/b[6]  ~ ALUTop/div_36/IN1 }
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/div_36/b[7]   $svf_impl/SystemTop/ALUTop/div_36/b[7]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/sub_28/B[7]   $svf_impl/SystemTop/ALUTop/sub_28/B[7]
+set_user_match   -inverted   $svf_ref/SystemTop/ALUTop/mult_32/B[7]   $svf_impl/SystemTop/ALUTop/mult_32/B[7]
+guide_constraints -body { ALUTop/div_36 } -equivalent { ALUTop/div_36/b[7]  ~ ALUTop/div_36/IN2 }
+set_user_match   -inverted   $svf_ref/SystemTop/UART_SCAN_MUX/SEL   $svf_impl/SystemTop/UART_SCAN_MUX/SEL
+set_user_match   -inverted   $svf_ref/SystemTop/TX_SCAN_MUX/SEL   $svf_impl/SystemTop/TX_SCAN_MUX/SEL
+set_user_match   -inverted   $svf_ref/SystemTop/RST_MUX/SEL   $svf_impl/SystemTop/RST_MUX/SEL
+set_user_match   -inverted   $svf_ref/SystemTop/UART_RST_SCAN_MUX/SEL   $svf_impl/SystemTop/UART_RST_SCAN_MUX/SEL
+set_user_match   -inverted   $svf_ref/SystemTop/REF_RST_SCAN_MUX/SEL   $svf_impl/SystemTop/REF_RST_SCAN_MUX/SEL
+set_user_match   -inverted   $svf_ref/SystemTop/REF_SCAN_MUX/SEL   $svf_impl/SystemTop/REF_SCAN_MUX/SEL
+guide_constraints -body { REF_SCAN_MUX } -equivalent { REF_SCAN_MUX/SEL  ~ REF_SCAN_MUX/IN2 }
+guide_constraints -body { UART_RST_SCAN_MUX } -equivalent { UART_RST_SCAN_MUX/SEL  ~ UART_RST_SCAN_MUX/IN2 }
+guide_constraints -body { TX_SCAN_MUX } -equivalent { TX_SCAN_MUX/SEL  ~ TX_SCAN_MUX/IN2 }
+guide_constraints -body { RST_MUX } -equivalent { RST_MUX/SEL  ~ RST_MUX/IN2 }
+guide_constraints -body { REF_RST_SCAN_MUX } -equivalent { REF_RST_SCAN_MUX/SEL  ~ REF_RST_SCAN_MUX/IN2 }
+guide_constraints -body { UART_SCAN_MUX } -equivalent { UART_SCAN_MUX/SEL  ~ UART_SCAN_MUX/IN2 }
+guide_constraints -body { RegisterFileTop } -equivalent { RegisterFileTop/test_se    RegisterFileTop/IN4   RegisterFileTop/IN5   RegisterFileTop/IN6   RegisterFileTop/IN7 }
+guide_constraints -body { SystemControlTop/CTRL_RX_TOP } -equivalent { SystemControlTop/CTRL_RX_TOP/test_se    SystemControlTop/CTRL_RX_TOP/IN1 }
+guide_constraints -body { SystemControlTop } -equivalent { SystemControlTop/test_se    SystemControlTop/IN2   SystemControlTop/IN3 }
+guide_constraints -body { DataSyncToTX/SyncBit0 } -equivalent { DataSyncToTX/SyncBit0/test_se    DataSyncToTX/SyncBit0/IN1 }
+guide_constraints -body { DataSyncToTX } -equivalent { DataSyncToTX/test_se    DataSyncToTX/IN8 }
+guide_constraints -body { UART_TOP/UART_RX_TOP } -equivalent { UART_TOP/UART_RX_TOP/test_se    UART_TOP/UART_RX_TOP/IN0   UART_TOP/UART_RX_TOP/IN1   UART_TOP/UART_RX_TOP/IN2 }
+guide_constraints -body { UART_TOP } -equivalent { UART_TOP/test_se    UART_TOP/IN2   UART_TOP/IN3   UART_TOP/IN4 }
+guide_constraints -body { UART_TOP/UART_RX_TOP/CounterTop } -equivalent { UART_TOP/UART_RX_TOP/CounterTop/test_se    UART_TOP/UART_RX_TOP/CounterTop/IN0 }
+guide_constraints -body { DataSyncToSysCtrl } -equivalent { DataSyncToSysCtrl/test_se    DataSyncToSysCtrl/IN9   DataSyncToSysCtrl/IN10   DataSyncToSysCtrl/IN11   DataSyncToSysCtrl/IN12 }
+
+#-------------------------------------------------------------------
+

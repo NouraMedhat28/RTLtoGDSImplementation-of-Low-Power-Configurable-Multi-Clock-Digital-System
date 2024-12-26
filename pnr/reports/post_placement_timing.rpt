@@ -1,0 +1,420 @@
+Warning: ICC has suggestions for improving your design.  Use "report_suggestions" for details.  (PSYN-1067)
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+Information: There are 273 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SystemTop
+Version: L-2016.03-SP1
+Date   : Thu Dec 26 20:43:36 2024
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_slow
+
+  Startpoint: RegisterFileTop/REG1_reg[7]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: ALUTop/ALU_OUT_reg[0]
+            (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Path Group: ref_clk_mux
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                           0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  RegisterFileTop/REG1_reg[7]/CK (SDFFR_X1)               0.00       0.00 r
+  RegisterFileTop/REG1_reg[7]/Q (SDFFR_X1)                0.35       0.35 f
+  RegisterFileTop/REG1[7] (RegisterFile_AddWidth4_BusWidth8_RegDepth16_test_1)
+                                                          0.00       0.35 f
+  ALUTop/B[7] (ALU_OpWidth8_FuncWidth4_test_1)            0.00       0.35 f
+  ALUTop/div_36/IN2 (ALU_OpWidth8_FuncWidth4_DW_div_uns_0)
+                                                          0.00       0.35 f
+  ALUTop/div_36/U61/ZN (NOR2_X1)                          0.26 *     0.62 r
+  ALUTop/div_36/U58/ZN (AND3_X1)                          0.19 *     0.80 r
+  ALUTop/div_36/U56/ZN (AND2_X1)                          0.14 *     0.94 r
+  ALUTop/div_36/U53/ZN (AND4_X1)                          0.22 *     1.17 r
+  ALUTop/div_36/U31/Z (MUX2_X1)                           0.25 *     1.42 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_6_1/CO (FA_X1)       0.28 *     1.70 f
+  ALUTop/div_36/U54/ZN (AND3_X1)                          0.16 *     1.86 f
+  ALUTop/div_36/U37/Z (MUX2_X1)                           0.21 *     2.07 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_5_1/CO (FA_X1)       0.31 *     2.37 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_5_2/CO (FA_X1)       0.26 *     2.64 f
+  ALUTop/div_36/U55/ZN (AND2_X1)                          0.14 *     2.78 f
+  ALUTop/div_36/U42/Z (MUX2_X1)                           0.21 *     2.99 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_4_1/CO (FA_X1)       0.30 *     3.28 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_4_2/CO (FA_X1)       0.29 *     3.57 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_4_3/CO (FA_X1)       0.26 *     3.83 f
+  ALUTop/div_36/U57/ZN (AND2_X1)                          0.14 *     3.98 f
+  ALUTop/div_36/U46/Z (MUX2_X1)                           0.21 *     4.19 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_1/CO (FA_X1)       0.30 *     4.49 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_2/CO (FA_X1)       0.29 *     4.78 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_3/CO (FA_X1)       0.28 *     5.06 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_4/CO (FA_X1)       0.27 *     5.33 f
+  ALUTop/div_36/U59/ZN (AND3_X1)                          0.19 *     5.52 f
+  ALUTop/div_36/U49/Z (MUX2_X1)                           0.21 *     5.73 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_1/CO (FA_X1)       0.30 *     6.03 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_2/CO (FA_X1)       0.29 *     6.32 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_3/CO (FA_X1)       0.28 *     6.61 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_4/CO (FA_X1)       0.28 *     6.89 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_5/CO (FA_X1)       0.26 *     7.15 f
+  ALUTop/div_36/U60/ZN (AND2_X1)                          0.16 *     7.31 f
+  ALUTop/div_36/U51/Z (MUX2_X1)                           0.22 *     7.53 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_1/CO (FA_X1)       0.31 *     7.84 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_2/CO (FA_X1)       0.29 *     8.13 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_3/CO (FA_X1)       0.29 *     8.42 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_4/CO (FA_X1)       0.28 *     8.70 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_5/CO (FA_X1)       0.29 *     8.98 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_6/CO (FA_X1)       0.27 *     9.26 f
+  ALUTop/div_36/U62/ZN (AND2_X1)                          0.17 *     9.43 f
+  ALUTop/div_36/U52/Z (MUX2_X1)                           0.22 *     9.65 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_1/CO (FA_X1)       0.30 *     9.95 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_2/CO (FA_X1)       0.30 *    10.25 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_3/CO (FA_X1)       0.29 *    10.53 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_4/CO (FA_X1)       0.28 *    10.81 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_5/CO (FA_X1)       0.29 *    11.10 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_6/CO (FA_X1)       0.29 *    11.39 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_7/CO (FA_X1)       0.29 *    11.68 f
+  ALUTop/div_36/quotient[0] (ALU_OpWidth8_FuncWidth4_DW_div_uns_0)
+                                                          0.00      11.68 f
+  ALUTop/U47/ZN (AOI222_X1)                               0.37 *    12.05 r
+  ALUTop/U55/ZN (AND4_X1)                                 0.26 *    12.31 r
+  ALUTop/U54/ZN (NOR2_X1)                                 0.04 *    12.35 f
+  ALUTop/ALU_OUT_reg[0]/D (SDFFR_X1)                      0.00 *    12.35 f
+  data arrival time                                                 12.35
+
+  clock ref_clk_mux (rise edge)                          20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  ALUTop/ALU_OUT_reg[0]/CK (SDFFR_X1)                     0.00      20.00 r
+  library setup time                                     -0.26      19.74
+  data required time                                                19.74
+  --------------------------------------------------------------------------
+  data required time                                                19.74
+  data arrival time                                                -12.35
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.40
+
+
+  Startpoint: UART_TOP/UART_RX_TOP/CounterTop/EdgeCounter_reg[0]
+              (rising edge-triggered flip-flop clocked by uart_clk_mux)
+  Endpoint: RX_VLD_SYNC/int_sig_reg
+            (rising edge-triggered flip-flop clocked by scan_ref_clk_mux)
+  Path Group: scan_ref_clk_mux
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock uart_clk_mux (rise edge)                      50960.00   50960.00
+  clock network delay (ideal)                             0.00   50960.00
+  UART_TOP/UART_RX_TOP/CounterTop/EdgeCounter_reg[0]/CK (SDFFR_X1)
+                                                          0.00   50960.00 r
+  UART_TOP/UART_RX_TOP/CounterTop/EdgeCounter_reg[0]/Q (SDFFR_X1)
+                                                          0.29   50960.29 r
+  UART_TOP/UART_RX_TOP/CounterTop/EdgeCounter[0] (EdgeBitCounter_test_1)
+                                                          0.00   50960.29 r
+  UART_TOP/UART_RX_TOP/FSMTop/EdgeCounter[0] (FSM_test_1)
+                                                          0.00   50960.29 r
+  UART_TOP/UART_RX_TOP/FSMTop/U13/ZN (NAND3_X1)           0.16 * 50960.45 f
+  UART_TOP/UART_RX_TOP/FSMTop/U22/ZN (OR4_X1)             0.48 * 50960.93 f
+  UART_TOP/UART_RX_TOP/FSMTop/U20/ZN (NOR2_X1)            0.21 * 50961.13 r
+  UART_TOP/UART_RX_TOP/FSMTop/U24/ZN (AND3_X1)            0.18 * 50961.31 r
+  UART_TOP/UART_RX_TOP/FSMTop/DataValid (FSM_test_1)      0.00   50961.31 r
+  UART_TOP/UART_RX_TOP/DataValid (UART_RX_test_1)         0.00   50961.31 r
+  UART_TOP/RX_D_VLD (UART_test_1)                         0.00   50961.31 r
+  RX_VLD_SYNC/UnsyncBit (Synchronizer_test_16)            0.00   50961.31 r
+  RX_VLD_SYNC/U5/ZN (NAND2_X1)                            0.05 * 50961.36 f
+  RX_VLD_SYNC/U9/ZN (OAI21_X1)                            0.07 * 50961.42 r
+  RX_VLD_SYNC/int_sig_reg/D (SDFFR_X1)                    0.00 * 50961.42 r
+  data arrival time                                              50961.42
+
+  clock scan_ref_clk_mux (rise edge)                  51000.00   51000.00
+  clock network delay (ideal)                             0.00   51000.00
+  RX_VLD_SYNC/int_sig_reg/CK (SDFFR_X1)                   0.00   51000.00 r
+  library setup time                                     -0.25   50999.75
+  data required time                                             50999.75
+  --------------------------------------------------------------------------
+  data required time                                             50999.75
+  data arrival time                                              -50961.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                       38.33
+
+
+  Startpoint: SystemControlTop/CTRL_TX_TOP/current_state_reg[0]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: DataSyncToTX/SyncBit4/int_sig_reg
+            (rising edge-triggered flip-flop clocked by scan_tx_clk_mux)
+  Path Group: scan_tx_clk_mux
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        2980.00    2980.00
+  clock network delay (ideal)                             0.00    2980.00
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[0]/CK (SDFFR_X1)
+                                                          0.00    2980.00 r
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[0]/QN (SDFFR_X1)
+                                                          0.45    2980.45 r
+  SystemControlTop/CTRL_TX_TOP/U26/ZN (NOR3_X2)           0.09 *  2980.54 f
+  SystemControlTop/CTRL_TX_TOP/U28/ZN (AOI222_X1)         0.45 *  2980.99 r
+  SystemControlTop/CTRL_TX_TOP/U27/ZN (INV_X1)            0.06 *  2981.04 f
+  SystemControlTop/CTRL_TX_TOP/TX_P_Data[4] (CTRL_TX_BusWidth8_test_1)
+                                                          0.00    2981.04 f
+  SystemControlTop/TX_P_Data[4] (SystemControl_BusWidth8_FuncWidth4_AddWidth4_test_1)
+                                                          0.00    2981.04 f
+  DataSyncToTX/UnsyncBus[4] (DataSync_BusWidth8_test_1)
+                                                          0.00    2981.04 f
+  DataSyncToTX/SyncBit4/UnsyncBit (Synchronizer_test_12)
+                                                          0.00    2981.04 f
+  DataSyncToTX/SyncBit4/U5/ZN (NAND2_X1)                  0.08 *  2981.13 r
+  DataSyncToTX/SyncBit4/U2/ZN (OAI21_X1)                  0.06 *  2981.18 f
+  DataSyncToTX/SyncBit4/int_sig_reg/D (SDFFR_X1)          0.00 *  2981.18 f
+  data arrival time                                               2981.18
+
+  clock scan_tx_clk_mux (rise edge)                    3000.00    3000.00
+  clock network delay (ideal)                             0.00    3000.00
+  DataSyncToTX/SyncBit4/int_sig_reg/CK (SDFFR_X1)         0.00    3000.00 r
+  library setup time                                     -0.26    2999.74
+  data required time                                              2999.74
+  --------------------------------------------------------------------------
+  data required time                                              2999.74
+  data arrival time                                              -2981.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                       18.56
+
+
+  Startpoint: RegisterFileTop/REG2_reg[0]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]
+            (rising edge-triggered flip-flop clocked by scan_uart_clk_mux)
+  Path Group: scan_uart_clk_mux
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        2980.00    2980.00
+  clock network delay (ideal)                             0.00    2980.00
+  RegisterFileTop/REG2_reg[0]/CK (SDFFR_X1)               0.00    2980.00 r
+  RegisterFileTop/REG2_reg[0]/Q (SDFFR_X1)                0.33    2980.33 f
+  RegisterFileTop/REG2[0] (RegisterFile_AddWidth4_BusWidth8_RegDepth16_test_1)
+                                                          0.00    2980.33 f
+  UART_TOP/ParityEn (UART_test_1)                         0.00    2980.33 f
+  UART_TOP/UART_RX_TOP/ParityEn (UART_RX_test_1)          0.00    2980.33 f
+  UART_TOP/UART_RX_TOP/CounterTop/ParityEn (EdgeBitCounter_test_1)
+                                                          0.00    2980.33 f
+  UART_TOP/UART_RX_TOP/CounterTop/U17/ZN (AOI221_X1)      0.34 *  2980.67 r
+  UART_TOP/UART_RX_TOP/CounterTop/U16/ZN (OAI211_X1)      0.17 *  2980.84 f
+  UART_TOP/UART_RX_TOP/CounterTop/U19/ZN (AOI21_X1)       0.17 *  2981.01 r
+  UART_TOP/UART_RX_TOP/CounterTop/U12/ZN (OAI21_X1)       0.10 *  2981.11 f
+  UART_TOP/UART_RX_TOP/CounterTop/U24/ZN (AOI21_X1)       0.18 *  2981.29 r
+  UART_TOP/UART_RX_TOP/CounterTop/U22/ZN (OAI21_X1)       0.07 *  2981.36 f
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/D (SDFFR_X1)
+                                                          0.00 *  2981.36 f
+  data arrival time                                               2981.36
+
+  clock scan_uart_clk_mux (rise edge)                  3000.00    3000.00
+  clock network delay (ideal)                             0.00    3000.00
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/CK (SDFFR_X1)
+                                                          0.00    3000.00 r
+  library setup time                                     -0.26    2999.74
+  data required time                                              2999.74
+  --------------------------------------------------------------------------
+  data required time                                              2999.74
+  data arrival time                                              -2981.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                       18.38
+
+
+  Startpoint: SystemControlTop/CTRL_TX_TOP/current_state_reg[0]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: DataSyncToTX/SyncBit4/int_sig_reg
+            (rising edge-triggered flip-flop clocked by tx_clk_mux)
+  Path Group: tx_clk_mux
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        8300.00    8300.00
+  clock network delay (ideal)                             0.00    8300.00
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[0]/CK (SDFFR_X1)
+                                                          0.00    8300.00 r
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[0]/QN (SDFFR_X1)
+                                                          0.45    8300.45 r
+  SystemControlTop/CTRL_TX_TOP/U26/ZN (NOR3_X2)           0.09 *  8300.54 f
+  SystemControlTop/CTRL_TX_TOP/U28/ZN (AOI222_X1)         0.45 *  8300.99 r
+  SystemControlTop/CTRL_TX_TOP/U27/ZN (INV_X1)            0.06 *  8301.04 f
+  SystemControlTop/CTRL_TX_TOP/TX_P_Data[4] (CTRL_TX_BusWidth8_test_1)
+                                                          0.00    8301.04 f
+  SystemControlTop/TX_P_Data[4] (SystemControl_BusWidth8_FuncWidth4_AddWidth4_test_1)
+                                                          0.00    8301.04 f
+  DataSyncToTX/UnsyncBus[4] (DataSync_BusWidth8_test_1)
+                                                          0.00    8301.04 f
+  DataSyncToTX/SyncBit4/UnsyncBit (Synchronizer_test_12)
+                                                          0.00    8301.04 f
+  DataSyncToTX/SyncBit4/U5/ZN (NAND2_X1)                  0.08 *  8301.13 r
+  DataSyncToTX/SyncBit4/U2/ZN (OAI21_X1)                  0.06 *  8301.18 f
+  DataSyncToTX/SyncBit4/int_sig_reg/D (SDFFR_X1)          0.00 *  8301.18 f
+  data arrival time                                               8301.18
+
+  clock tx_clk_mux (rise edge)                         8320.00    8320.00
+  clock network delay (ideal)                             0.00    8320.00
+  DataSyncToTX/SyncBit4/int_sig_reg/CK (SDFFR_X1)         0.00    8320.00 r
+  library setup time                                     -0.26    8319.74
+  data required time                                              8319.74
+  --------------------------------------------------------------------------
+  data required time                                              8319.74
+  data arrival time                                              -8301.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                       18.56
+
+
+  Startpoint: UART_TOP/UART_TX_Top/FSMTopTX/PresentState_reg[1]
+              (rising edge-triggered flip-flop clocked by scan_tx_clk_mux)
+  Endpoint: TX_OUT (output port clocked by uart_clk)
+  Path Group: uart_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock scan_tx_clk_mux (rise edge)                   27000.00   27000.00
+  clock network delay (ideal)                             0.00   27000.00
+  UART_TOP/UART_TX_Top/FSMTopTX/PresentState_reg[1]/CK (SDFFR_X1)
+                                                          0.00   27000.00 r
+  UART_TOP/UART_TX_Top/FSMTopTX/PresentState_reg[1]/QN (SDFFR_X1)
+                                                          0.31   27000.31 f
+  UART_TOP/UART_TX_Top/FSMTopTX/U13/ZN (NOR2_X1)          0.21 * 27000.53 r
+  UART_TOP/UART_TX_Top/FSMTopTX/MuxSelection[1] (FSM_TX)
+                                                          0.00   27000.53 r
+  UART_TOP/UART_TX_Top/MuxTop/MuxSelection[1] (MUX)       0.00   27000.53 r
+  UART_TOP/UART_TX_Top/MuxTop/U5/ZN (NAND3_X1)            0.08 * 27000.61 f
+  UART_TOP/UART_TX_Top/MuxTop/U7/ZN (NAND2_X1)            0.24 * 27000.85 r
+  UART_TOP/UART_TX_Top/MuxTop/TXOut (MUX)                 0.00   27000.85 r
+  UART_TOP/UART_TX_Top/TXOut (UART_TX_test_1)             0.00   27000.85 r
+  UART_TOP/TX_S_Data (UART_test_1)                        0.00   27000.85 r
+  TX_OUT (out)                                            0.01 * 27000.86 r
+  data arrival time                                              27000.86
+
+  clock uart_clk (rise edge)                          27040.00   27040.00
+  clock network delay (ideal)                             0.20   27040.20
+  clock uncertainty                                      -0.20   27040.00
+  output external delay                                  -0.10   27039.90
+  data required time                                             27039.90
+  --------------------------------------------------------------------------
+  data required time                                             27039.90
+  data arrival time                                              -27000.86
+  --------------------------------------------------------------------------
+  slack (MET)                                                       39.04
+
+
+  Startpoint: ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg
+              (rising edge-triggered flip-flop clocked by uart_clk_2)
+  Endpoint: ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg
+            (rising edge-triggered flip-flop clocked by uart_clk_2)
+  Path Group: uart_clk_2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock uart_clk_2 (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00       0.00 r
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/QN (SDFFR_X1)
+                                                          0.34       0.34 r
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/D (SDFFR_X1)
+                                                          0.00 *     0.34 r
+  data arrival time                                                  0.34
+
+  clock uart_clk_2 (rise edge)                         2080.00    2080.00
+  clock network delay (ideal)                             0.00    2080.00
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00    2080.00 r
+  library setup time                                     -0.24    2079.76
+  data required time                                              2079.76
+  --------------------------------------------------------------------------
+  data required time                                              2079.76
+  data arrival time                                                 -0.34
+  --------------------------------------------------------------------------
+  slack (MET)                                                     2079.42
+
+
+  Startpoint: ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg
+              (rising edge-triggered flip-flop clocked by uart_clk_4)
+  Endpoint: ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg
+            (rising edge-triggered flip-flop clocked by uart_clk_4)
+  Path Group: uart_clk_4
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock uart_clk_4 (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00       0.00 r
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/QN (SDFFR_X1)
+                                                          0.34       0.34 r
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/D (SDFFR_X1)
+                                                          0.00 *     0.34 r
+  data arrival time                                                  0.34
+
+  clock uart_clk_4 (rise edge)                         4160.00    4160.00
+  clock network delay (ideal)                             0.00    4160.00
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00    4160.00 r
+  library setup time                                     -0.24    4159.76
+  data required time                                              4159.76
+  --------------------------------------------------------------------------
+  data required time                                              4159.76
+  data arrival time                                                 -0.34
+  --------------------------------------------------------------------------
+  slack (MET)                                                     4159.42
+
+
+  Startpoint: RegisterFileTop/REG2_reg[0]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]
+            (rising edge-triggered flip-flop clocked by uart_clk_mux)
+  Path Group: uart_clk_mux
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        1020.00    1020.00
+  clock network delay (ideal)                             0.00    1020.00
+  RegisterFileTop/REG2_reg[0]/CK (SDFFR_X1)               0.00    1020.00 r
+  RegisterFileTop/REG2_reg[0]/Q (SDFFR_X1)                0.33    1020.33 f
+  RegisterFileTop/REG2[0] (RegisterFile_AddWidth4_BusWidth8_RegDepth16_test_1)
+                                                          0.00    1020.33 f
+  UART_TOP/ParityEn (UART_test_1)                         0.00    1020.33 f
+  UART_TOP/UART_RX_TOP/ParityEn (UART_RX_test_1)          0.00    1020.33 f
+  UART_TOP/UART_RX_TOP/CounterTop/ParityEn (EdgeBitCounter_test_1)
+                                                          0.00    1020.33 f
+  UART_TOP/UART_RX_TOP/CounterTop/U17/ZN (AOI221_X1)      0.34 *  1020.67 r
+  UART_TOP/UART_RX_TOP/CounterTop/U16/ZN (OAI211_X1)      0.17 *  1020.84 f
+  UART_TOP/UART_RX_TOP/CounterTop/U19/ZN (AOI21_X1)       0.17 *  1021.01 r
+  UART_TOP/UART_RX_TOP/CounterTop/U12/ZN (OAI21_X1)       0.10 *  1021.11 f
+  UART_TOP/UART_RX_TOP/CounterTop/U24/ZN (AOI21_X1)       0.18 *  1021.29 r
+  UART_TOP/UART_RX_TOP/CounterTop/U22/ZN (OAI21_X1)       0.07 *  1021.36 f
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/D (SDFFR_X1)
+                                                          0.00 *  1021.36 f
+  data arrival time                                               1021.36
+
+  clock uart_clk_mux (rise edge)                       1040.00    1040.00
+  clock network delay (ideal)                             0.00    1040.00
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/CK (SDFFR_X1)
+                                                          0.00    1040.00 r
+  library setup time                                     -0.26    1039.74
+  data required time                                              1039.74
+  --------------------------------------------------------------------------
+  data required time                                              1039.74
+  data arrival time                                              -1021.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                       18.38
+
+
+Warning: ICC has suggestions for improving your design.  Use "report_suggestions" for details.  (PSYN-1067)
+1

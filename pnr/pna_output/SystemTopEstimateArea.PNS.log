@@ -1,0 +1,21 @@
+
+Name of design : SystemTopEstimateArea
+Number of cell instance masters in the library : 36
+Number of cell instances in the design : 1500
+Target IR drop : 22.000 mV
+Processing net VDD ...
+Average power dissipation in SystemTopEstimateArea :  1000.00 mW
+Power supply voltage :     1.10 V
+Average current in SystemTopEstimateArea :   909.09 mA
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 40
+Maximum IR drop in SystemTopEstimateArea : 11.61 mV
+Maximum current in SystemTopEstimateArea : 26.426 mA
+Processing net VSS ...
+Average power dissipation in SystemTopEstimateArea :  1000.00 mW
+Power supply voltage :     1.10 V
+Average current in SystemTopEstimateArea :   909.09 mA
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 40
+Maximum IR drop in SystemTopEstimateArea : 10.28 mV
+Maximum current in SystemTopEstimateArea : 26.807 mA
+Memory usage for design data :      37150.720 Kbytes
+Overall takes     0.09 seconds
