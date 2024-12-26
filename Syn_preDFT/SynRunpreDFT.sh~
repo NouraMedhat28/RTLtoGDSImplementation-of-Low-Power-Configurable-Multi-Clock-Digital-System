@@ -1,0 +1,2 @@
+#!bin/bash
+dc_shell -f ./scripts/logical_syc.tcl | tee ./logs/syn_pre_dft.log
