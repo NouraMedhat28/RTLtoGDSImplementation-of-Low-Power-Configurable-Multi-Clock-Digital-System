@@ -1,0 +1,413 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SystemTop
+Version: K-2015.06
+Date   : Wed Dec 25 17:15:39 2024
+****************************************
+
+Operating Conditions: fast   Library: NangateOpenCellLibrary_fast
+Wire Load Model Mode: top
+
+  Startpoint: RegisterFileTop/REG1_reg[4]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: ALUTop/ALU_OUT_reg[0]
+            (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Path Group: ref_clk_mux
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                           0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  RegisterFileTop/REG1_reg[4]/CK (SDFFR_X1)               0.00       0.00 r
+  RegisterFileTop/REG1_reg[4]/Q (SDFFR_X1)                0.06       0.06 f
+  RegisterFileTop/REG1[4] (RegisterFile_AddWidth4_BusWidth8_RegDepth16_test_1)
+                                                          0.00       0.06 f
+  ALUTop/B[4] (ALU_OpWidth8_FuncWidth4_test_1)            0.00       0.06 f
+  ALUTop/div_36/b[4] (ALU_OpWidth8_FuncWidth4_DW_div_uns_0)
+                                                          0.00       0.06 f
+  ALUTop/div_36/U5/ZN (INV_X1)                            0.06       0.12 r
+  ALUTop/div_36/U58/ZN (AND3_X1)                          0.04       0.16 r
+  ALUTop/div_36/U56/ZN (AND2_X1)                          0.03       0.20 r
+  ALUTop/div_36/U53/ZN (AND4_X1)                          0.05       0.25 r
+  ALUTop/div_36/U31/Z (MUX2_X1)                           0.05       0.30 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_6_1/CO (FA_X1)       0.07       0.37 f
+  ALUTop/div_36/U54/ZN (AND3_X1)                          0.03       0.40 f
+  ALUTop/div_36/U37/Z (MUX2_X1)                           0.05       0.46 r
+  ALUTop/div_36/u_div/u_fa_PartRem_0_5_1/CO (FA_X1)       0.06       0.52 r
+  ALUTop/div_36/u_div/u_fa_PartRem_0_5_2/CO (FA_X1)       0.05       0.57 r
+  ALUTop/div_36/U55/ZN (AND2_X1)                          0.04       0.60 r
+  ALUTop/div_36/U42/Z (MUX2_X1)                           0.06       0.66 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_4_1/CO (FA_X1)       0.07       0.73 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_4_2/CO (FA_X1)       0.06       0.79 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_4_3/CO (FA_X1)       0.05       0.84 f
+  ALUTop/div_36/U57/ZN (AND2_X1)                          0.04       0.88 f
+  ALUTop/div_36/U46/Z (MUX2_X1)                           0.05       0.93 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_1/CO (FA_X1)       0.07       1.00 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_2/CO (FA_X1)       0.06       1.06 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_3/CO (FA_X1)       0.06       1.11 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_3_4/CO (FA_X1)       0.05       1.17 f
+  ALUTop/div_36/U59/ZN (AND3_X1)                          0.04       1.21 f
+  ALUTop/div_36/U49/Z (MUX2_X1)                           0.05       1.26 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_1/CO (FA_X1)       0.07       1.33 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_2/CO (FA_X1)       0.06       1.39 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_3/CO (FA_X1)       0.06       1.45 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_4/CO (FA_X1)       0.06       1.50 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_2_5/CO (FA_X1)       0.05       1.56 f
+  ALUTop/div_36/U60/ZN (AND2_X1)                          0.04       1.60 f
+  ALUTop/div_36/U51/Z (MUX2_X1)                           0.06       1.65 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_1/CO (FA_X1)       0.07       1.72 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_2/CO (FA_X1)       0.06       1.78 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_3/CO (FA_X1)       0.06       1.84 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_4/CO (FA_X1)       0.06       1.90 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_5/CO (FA_X1)       0.06       1.95 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_1_6/CO (FA_X1)       0.05       2.01 f
+  ALUTop/div_36/U62/ZN (AND2_X1)                          0.04       2.05 f
+  ALUTop/div_36/U52/Z (MUX2_X1)                           0.06       2.11 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_1/CO (FA_X1)       0.07       2.17 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_2/CO (FA_X1)       0.06       2.23 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_3/CO (FA_X1)       0.06       2.29 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_4/CO (FA_X1)       0.06       2.35 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_5/CO (FA_X1)       0.06       2.40 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_6/CO (FA_X1)       0.06       2.46 f
+  ALUTop/div_36/u_div/u_fa_PartRem_0_0_7/CO (FA_X1)       0.06       2.52 f
+  ALUTop/div_36/quotient[0] (ALU_OpWidth8_FuncWidth4_DW_div_uns_0)
+                                                          0.00       2.52 f
+  ALUTop/U47/ZN (AOI222_X1)                               0.05       2.57 r
+  ALUTop/U55/ZN (AND4_X1)                                 0.05       2.62 r
+  ALUTop/U54/ZN (NOR2_X1)                                 0.02       2.63 f
+  ALUTop/ALU_OUT_reg[0]/D (SDFFR_X1)                      0.01       2.64 f
+  data arrival time                                                  2.64
+
+  clock ref_clk_mux (rise edge)                          20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  ALUTop/ALU_OUT_reg[0]/CK (SDFFR_X1)                     0.00      20.00 r
+  library setup time                                     -0.05      19.95
+  data required time                                                19.95
+  --------------------------------------------------------------------------
+  data required time                                                19.95
+  data arrival time                                                 -2.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                       17.31
+
+
+  Startpoint: UART_TOP/UART_TX_Top/FSMTopTX/PresentState_reg[2]
+              (rising edge-triggered flip-flop clocked by tx_clk_mux)
+  Endpoint: SystemControlTop/CTRL_TX_TOP/current_state_reg[1]
+            (rising edge-triggered flip-flop clocked by scan_ref_clk_mux)
+  Path Group: scan_ref_clk_mux
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock tx_clk_mux (rise edge)                        440960.00  440960.00
+  clock network delay (ideal)                             0.00   440960.00
+  UART_TOP/UART_TX_Top/FSMTopTX/PresentState_reg[2]/CK (SDFFR_X1)
+                                                          0.00   440960.00 r
+  UART_TOP/UART_TX_Top/FSMTopTX/PresentState_reg[2]/QN (SDFFR_X1)
+                                                          0.06   440960.06 f
+  UART_TOP/UART_TX_Top/FSMTopTX/U18/ZN (NAND2_X1)         0.03   440960.09 r
+  UART_TOP/UART_TX_Top/FSMTopTX/U9/ZN (OAI21_X1)          0.03   440960.12 f
+  UART_TOP/UART_TX_Top/FSMTopTX/Busy (FSM_TX)             0.00   440960.12 f
+  UART_TOP/UART_TX_Top/Busy (UART_TX_test_1)              0.00   440960.12 f
+  UART_TOP/TX_Busy (UART_test_1)                          0.00   440960.12 f
+  SystemControlTop/TX_Busy (SystemControl_BusWidth8_FuncWidth4_AddWidth4_test_1)
+                                                          0.00   440960.12 f
+  SystemControlTop/CTRL_TX_TOP/TX_Busy (CTRL_TX_BusWidth8_test_1)
+                                                          0.00   440960.12 f
+  SystemControlTop/CTRL_TX_TOP/U6/ZN (INV_X1)             0.03   440960.16 r
+  SystemControlTop/CTRL_TX_TOP/U36/ZN (NAND2_X1)          0.03   440960.19 f
+  SystemControlTop/CTRL_TX_TOP/U11/ZN (OAI21_X1)          0.03   440960.22 r
+  SystemControlTop/CTRL_TX_TOP/U16/ZN (XNOR2_X1)          0.03   440960.25 r
+  SystemControlTop/CTRL_TX_TOP/U15/ZN (NAND4_X1)          0.06   440960.31 f
+  SystemControlTop/CTRL_TX_TOP/U14/ZN (OAI21_X1)          0.00   440960.31 r
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[1]/D (SDFFR_X1)
+                                                          0.03   440960.34 r
+  data arrival time                                              440960.34
+
+  clock scan_ref_clk_mux (rise edge)                  441000.00  441000.00
+  clock network delay (ideal)                             0.00   441000.00
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[1]/CK (SDFFR_X1)
+                                                          0.00   441000.00 r
+  library setup time                                     -0.04   440999.97
+  data required time                                             440999.97
+  --------------------------------------------------------------------------
+  data required time                                             440999.97
+  data arrival time                                              -440960.34
+  --------------------------------------------------------------------------
+  slack (MET)                                                       39.62
+
+
+  Startpoint: SystemControlTop/CTRL_TX_TOP/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: DataSyncToTX/SyncBit4/int_sig_reg
+            (rising edge-triggered flip-flop clocked by scan_tx_clk_mux)
+  Path Group: scan_tx_clk_mux
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        2980.00    2980.00
+  clock network delay (ideal)                             0.00    2980.00
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[1]/CK (SDFFR_X1)
+                                                          0.00    2980.00 r
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[1]/QN (SDFFR_X1)
+                                                          0.07    2980.07 f
+  SystemControlTop/CTRL_TX_TOP/U26/ZN (NOR3_X2)           0.09    2980.16 r
+  SystemControlTop/CTRL_TX_TOP/U28/ZN (AOI222_X1)         0.04    2980.20 f
+  SystemControlTop/CTRL_TX_TOP/U27/ZN (INV_X1)            0.02    2980.22 r
+  SystemControlTop/CTRL_TX_TOP/TX_P_Data[4] (CTRL_TX_BusWidth8_test_1)
+                                                          0.00    2980.22 r
+  SystemControlTop/TX_P_Data[4] (SystemControl_BusWidth8_FuncWidth4_AddWidth4_test_1)
+                                                          0.00    2980.22 r
+  DataSyncToTX/UnsyncBus[4] (DataSync_BusWidth8_test_1)
+                                                          0.00    2980.22 r
+  DataSyncToTX/SyncBit4/UnsyncBit (Synchronizer_test_12)
+                                                          0.00    2980.22 r
+  DataSyncToTX/SyncBit4/U5/ZN (NAND2_X1)                  0.02    2980.24 f
+  DataSyncToTX/SyncBit4/U2/ZN (OAI21_X1)                  0.03    2980.27 r
+  DataSyncToTX/SyncBit4/int_sig_reg/D (SDFFR_X1)          0.01    2980.28 r
+  data arrival time                                               2980.28
+
+  clock scan_tx_clk_mux (rise edge)                    3000.00    3000.00
+  clock network delay (ideal)                             0.00    3000.00
+  DataSyncToTX/SyncBit4/int_sig_reg/CK (SDFFR_X1)         0.00    3000.00 r
+  library setup time                                     -0.04    2999.96
+  data required time                                              2999.96
+  --------------------------------------------------------------------------
+  data required time                                              2999.96
+  data arrival time                                              -2980.28
+  --------------------------------------------------------------------------
+  slack (MET)                                                       19.68
+
+
+  Startpoint: RegisterFileTop/REG2_reg[0]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]
+            (rising edge-triggered flip-flop clocked by scan_uart_clk_mux)
+  Path Group: scan_uart_clk_mux
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        2980.00    2980.00
+  clock network delay (ideal)                             0.00    2980.00
+  RegisterFileTop/REG2_reg[0]/CK (SDFFR_X1)               0.00    2980.00 r
+  RegisterFileTop/REG2_reg[0]/Q (SDFFR_X1)                0.06    2980.06 r
+  RegisterFileTop/REG2[0] (RegisterFile_AddWidth4_BusWidth8_RegDepth16_test_1)
+                                                          0.00    2980.06 r
+  UART_TOP/ParityEn (UART_test_1)                         0.00    2980.06 r
+  UART_TOP/UART_RX_TOP/ParityEn (UART_RX_test_1)          0.00    2980.06 r
+  UART_TOP/UART_RX_TOP/CounterTop/ParityEn (EdgeBitCounter_test_1)
+                                                          0.00    2980.06 r
+  UART_TOP/UART_RX_TOP/CounterTop/U18/ZN (INV_X1)         0.02    2980.09 f
+  UART_TOP/UART_RX_TOP/CounterTop/U17/ZN (AOI221_X1)      0.04    2980.13 r
+  UART_TOP/UART_RX_TOP/CounterTop/U16/ZN (OAI211_X1)      0.05    2980.17 f
+  UART_TOP/UART_RX_TOP/CounterTop/U19/ZN (AOI21_X1)       0.04    2980.21 r
+  UART_TOP/UART_RX_TOP/CounterTop/U12/ZN (OAI21_X1)       0.03    2980.25 f
+  UART_TOP/UART_RX_TOP/CounterTop/U24/ZN (AOI21_X1)       0.04    2980.28 r
+  UART_TOP/UART_RX_TOP/CounterTop/U22/ZN (OAI21_X1)       0.02    2980.31 f
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/D (SDFFR_X1)
+                                                          0.01    2980.32 f
+  data arrival time                                               2980.32
+
+  clock scan_uart_clk_mux (rise edge)                  3000.00    3000.00
+  clock network delay (ideal)                             0.00    3000.00
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/CK (SDFFR_X1)
+                                                          0.00    3000.00 r
+  library setup time                                     -0.05    2999.95
+  data required time                                              2999.95
+  --------------------------------------------------------------------------
+  data required time                                              2999.95
+  data arrival time                                              -2980.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                       19.64
+
+
+  Startpoint: SystemControlTop/CTRL_TX_TOP/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: DataSyncToTX/SyncBit4/int_sig_reg
+            (rising edge-triggered flip-flop clocked by tx_clk_mux)
+  Path Group: tx_clk_mux
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        8300.00    8300.00
+  clock network delay (ideal)                             0.00    8300.00
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[1]/CK (SDFFR_X1)
+                                                          0.00    8300.00 r
+  SystemControlTop/CTRL_TX_TOP/current_state_reg[1]/QN (SDFFR_X1)
+                                                          0.07    8300.07 f
+  SystemControlTop/CTRL_TX_TOP/U26/ZN (NOR3_X2)           0.09    8300.16 r
+  SystemControlTop/CTRL_TX_TOP/U28/ZN (AOI222_X1)         0.04    8300.20 f
+  SystemControlTop/CTRL_TX_TOP/U27/ZN (INV_X1)            0.02    8300.22 r
+  SystemControlTop/CTRL_TX_TOP/TX_P_Data[4] (CTRL_TX_BusWidth8_test_1)
+                                                          0.00    8300.22 r
+  SystemControlTop/TX_P_Data[4] (SystemControl_BusWidth8_FuncWidth4_AddWidth4_test_1)
+                                                          0.00    8300.22 r
+  DataSyncToTX/UnsyncBus[4] (DataSync_BusWidth8_test_1)
+                                                          0.00    8300.22 r
+  DataSyncToTX/SyncBit4/UnsyncBit (Synchronizer_test_12)
+                                                          0.00    8300.22 r
+  DataSyncToTX/SyncBit4/U5/ZN (NAND2_X1)                  0.02    8300.24 f
+  DataSyncToTX/SyncBit4/U2/ZN (OAI21_X1)                  0.03    8300.27 r
+  DataSyncToTX/SyncBit4/int_sig_reg/D (SDFFR_X1)          0.01    8300.28 r
+  data arrival time                                               8300.28
+
+  clock tx_clk_mux (rise edge)                         8320.00    8320.00
+  clock network delay (ideal)                             0.00    8320.00
+  DataSyncToTX/SyncBit4/int_sig_reg/CK (SDFFR_X1)         0.00    8320.00 r
+  library setup time                                     -0.04    8319.96
+  data required time                                              8319.96
+  --------------------------------------------------------------------------
+  data required time                                              8319.96
+  data arrival time                                              -8300.28
+  --------------------------------------------------------------------------
+  slack (MET)                                                       19.68
+
+
+  Startpoint: ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg
+              (rising edge-triggered flip-flop clocked by uart_clk_2)
+  Endpoint: ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg
+            (rising edge-triggered flip-flop clocked by uart_clk_2)
+  Path Group: uart_clk_2
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock uart_clk_2 (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00       0.00 r
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/QN (SDFFR_X1)
+                                                          0.06       0.06 f
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/D (SDFFR_X1)
+                                                          0.01       0.07 f
+  data arrival time                                                  0.07
+
+  clock uart_clk_2 (rise edge)                         2080.00    2080.00
+  clock network delay (ideal)                             0.00    2080.00
+  ClockDividerTopSys8/ClockDivider4Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00    2080.00 r
+  library setup time                                     -0.05    2079.95
+  data required time                                              2079.95
+  --------------------------------------------------------------------------
+  data required time                                              2079.95
+  data arrival time                                                 -0.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                     2079.89
+
+
+  Startpoint: ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg
+              (rising edge-triggered flip-flop clocked by uart_clk_4)
+  Endpoint: ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg
+            (rising edge-triggered flip-flop clocked by uart_clk_4)
+  Path Group: uart_clk_4
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock uart_clk_4 (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00       0.00 r
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/QN (SDFFR_X1)
+                                                          0.06       0.06 f
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/D (SDFFR_X1)
+                                                          0.01       0.07 f
+  data arrival time                                                  0.07
+
+  clock uart_clk_4 (rise edge)                         4160.00    4160.00
+  clock network delay (ideal)                             0.00    4160.00
+  ClockDividerTopSys8/ClockDivider8Top/o_div_clk_reg/CK (SDFFR_X1)
+                                                          0.00    4160.00 r
+  library setup time                                     -0.05    4159.95
+  data required time                                              4159.95
+  --------------------------------------------------------------------------
+  data required time                                              4159.95
+  data arrival time                                                 -0.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                     4159.89
+
+
+  Startpoint: RegisterFileTop/REG2_reg[0]
+              (rising edge-triggered flip-flop clocked by ref_clk_mux)
+  Endpoint: UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]
+            (rising edge-triggered flip-flop clocked by uart_clk_mux)
+  Path Group: uart_clk_mux
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SystemTop          5K_hvratio_1_1        NangateOpenCellLibrary_fast
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ref_clk_mux (rise edge)                        1020.00    1020.00
+  clock network delay (ideal)                             0.00    1020.00
+  RegisterFileTop/REG2_reg[0]/CK (SDFFR_X1)               0.00    1020.00 r
+  RegisterFileTop/REG2_reg[0]/Q (SDFFR_X1)                0.06    1020.06 r
+  RegisterFileTop/REG2[0] (RegisterFile_AddWidth4_BusWidth8_RegDepth16_test_1)
+                                                          0.00    1020.06 r
+  UART_TOP/ParityEn (UART_test_1)                         0.00    1020.06 r
+  UART_TOP/UART_RX_TOP/ParityEn (UART_RX_test_1)          0.00    1020.06 r
+  UART_TOP/UART_RX_TOP/CounterTop/ParityEn (EdgeBitCounter_test_1)
+                                                          0.00    1020.06 r
+  UART_TOP/UART_RX_TOP/CounterTop/U18/ZN (INV_X1)         0.02    1020.09 f
+  UART_TOP/UART_RX_TOP/CounterTop/U17/ZN (AOI221_X1)      0.04    1020.13 r
+  UART_TOP/UART_RX_TOP/CounterTop/U16/ZN (OAI211_X1)      0.05    1020.17 f
+  UART_TOP/UART_RX_TOP/CounterTop/U19/ZN (AOI21_X1)       0.04    1020.21 r
+  UART_TOP/UART_RX_TOP/CounterTop/U12/ZN (OAI21_X1)       0.03    1020.25 f
+  UART_TOP/UART_RX_TOP/CounterTop/U24/ZN (AOI21_X1)       0.04    1020.28 r
+  UART_TOP/UART_RX_TOP/CounterTop/U22/ZN (OAI21_X1)       0.02    1020.31 f
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/D (SDFFR_X1)
+                                                          0.01    1020.32 f
+  data arrival time                                               1020.32
+
+  clock uart_clk_mux (rise edge)                       1040.00    1040.00
+  clock network delay (ideal)                             0.00    1040.00
+  UART_TOP/UART_RX_TOP/CounterTop/BitCounter_reg[3]/CK (SDFFR_X1)
+                                                          0.00    1040.00 r
+  library setup time                                     -0.05    1039.95
+  data required time                                              1039.95
+  --------------------------------------------------------------------------
+  data required time                                              1039.95
+  data arrival time                                              -1020.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                       19.64
+
+
+1
