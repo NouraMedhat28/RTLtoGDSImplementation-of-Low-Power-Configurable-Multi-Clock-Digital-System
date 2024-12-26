@@ -1,0 +1,34 @@
+Info:  Net Ref:/WORK/SystemTop/SO[2] is undriven.
+Info:  Net Ref:/WORK/SystemTop/SO[1] is undriven.
+Info:  Net Ref:/WORK/SystemTop/SO[0] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][7] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][6] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][5] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][4] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][3] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][2] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][1] is undriven.
+Info:  Net Ref:/WORK/RegisterFile_AddWidth4_BusWidth8_RegDepth16/RegFile[16][0] is undriven.
+Info:  Net Imp:/WORK/SystemTop/SO[2] is undriven.
+Info:  Net Imp:/WORK/SystemTop/SO[1] is undriven.
+Info:  Net Imp:/WORK/SystemTop/SO[0] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[7] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[6] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[5] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[4] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[3] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[2] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[1] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/remainder[0] is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW_div_uns_0/divide_by_0 is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW01_sub_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW01_add_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_OpWidth8_FuncWidth4_DW01_add_1/CO is undriven.
+Info:  guide_transformation 46 (Line: 313)  Unmatched boundary nodes.
+Info:  guide_uniquify 54 (Line: 407)  Cannot find object "TX_SCAN_MUX/U1" in design 'SystemTop'.
+Info:  SVF Operation 54 (Line: 407) - uniquify.  Status: rejected
+Info:  guide_uniquify 54 (Line: 407)  Cannot find object "UART_SCAN_MUX/U1" in design 'SystemTop'.
+Info:  guide_uniquify 54 (Line: 407)  Cannot find object "REF_SCAN_MUX/U1" in design 'SystemTop'.
+Info:  guide_uniquify 62 (Line: 470)  Cannot find object "ALUTop/dp_cluster_0/mult_32" in design 'SystemTop'.
+Info:  Pre-verification of Ref:/WORK/ALU_OpWidth8_FuncWidth4/div_36 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/ALU_OpWidth8_FuncWidth4/mult_32 SUCCEEDED.

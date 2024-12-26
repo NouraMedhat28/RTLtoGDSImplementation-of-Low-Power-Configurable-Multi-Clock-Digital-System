@@ -1,0 +1,292 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Wed Dec 25 17:01:54 2024
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+set DWC_STD_DB "../std_cells/NanGate/dbs/NangateOpenCellLibrary_fast.db ../std_cells/NanGate/dbs/NangateOpenCellLibrary_slow.db ../std_cells/NanGate/dbs/NangateOpenCellLibrary_typical.db"
+../std_cells/NanGate/dbs/NangateOpenCellLibrary_fast.db ../std_cells/NanGate/dbs/NangateOpenCellLibrary_slow.db ../std_cells/NanGate/dbs/NangateOpenCellLibrary_typical.db
+set design_name SystemTop
+SystemTop
+file mkdir reports
+set synopsys_auto_setup true
+true
+set_svf "../Syn_preDFT/SystemTop.svf"
+SVF set to '../Syn_preDFT/SystemTop.svf'.
+1
+## Reading Reference Container Standarad Cells, RTL
+read_db -container Ref $DWC_STD_DB
+Loading db file '/home/IC/Desktop/FinalProject/std_cells/NanGate/dbs/NangateOpenCellLibrary_fast.db'
+Created container 'Ref'
+Current container set to 'Ref'
+Loading db file '/home/IC/Desktop/FinalProject/std_cells/NanGate/dbs/NangateOpenCellLibrary_slow.db'
+Loading db file '/home/IC/Desktop/FinalProject/std_cells/NanGate/dbs/NangateOpenCellLibrary_typical.db'
+1
+foreach rtlfile [glob -nocomplain -directory ../RTL *.v] {
+	read_verilog -container Ref $rtlfile
+}
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/ClockDivider8.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/ParityCheck.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/FSM.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/DataSync.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/RegisterFile.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/StartCheck.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/Serializer.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/StopCheck.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/ALU.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/EdgeBitCounter.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/UART_RX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/ResetSync.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/MUX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/FSM_TX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/ClockDivider2.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/MUX2X1.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/CTRL_TX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/ParityCalc.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/Synchronizer.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/UART_TX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/UART.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/Deserializer.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/CTRL_RX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/SystemTop.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/SystemControl.v'
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/RTL/OverSampling.v'
+set_reference_design $design_name
+Reference design set to 'Ref:/WORK/SystemTop'
+1
+set_top $design_name
+Setting top design to 'Ref:/WORK/SystemTop'
+Status:   Elaborating design SystemTop   ...  
+Status:   Elaborating design MUX2X1   ...  
+Status:   Elaborating design ClockDivider8   ...  
+Status:   Elaborating design ClockDivider2   ...  
+Status:   Elaborating design ResetSync   ...  
+Status:   Elaborating design Synchronizer   ...  
+Status:   Elaborating design SystemControl  BusWidth=8, FuncWidth=4, AddWidth=4 ...  
+Information: Created design named 'SystemControl_BusWidth8_FuncWidth4_AddWidth4'. (FE-LINK-13)
+Status:   Elaborating design CTRL_RX  BusWidth=8, FuncWidth=4, AddWidth=4 ...  
+Information: Created design named 'CTRL_RX_BusWidth8_FuncWidth4_AddWidth4'. (FE-LINK-13)
+Status:   Elaborating design CTRL_TX  BusWidth=8 ...  
+Information: Created design named 'CTRL_TX_BusWidth8'. (FE-LINK-13)
+Status:   Elaborating design ALU  OpWidth=8, FuncWidth=4 ...  
+Information: Created design named 'ALU_OpWidth8_FuncWidth4'. (FE-LINK-13)
+Status:   Elaborating design RegisterFile  AddWidth=4, BusWidth=8, RegDepth=16 ...  
+Information: Created design named 'RegisterFile_AddWidth4_BusWidth8_RegDepth16'. (FE-LINK-13)
+Status:   Elaborating design UART   ...  
+Status:   Elaborating design UART_RX   ...  
+Status:   Elaborating design FSM   ...  
+Status:   Elaborating design ParityCheck   ...  
+Status:   Elaborating design StopCheck   ...  
+Status:   Elaborating design Deserializer   ...  
+Status:   Elaborating design StartCheck   ...  
+Status:   Elaborating design OverSampling   ...  
+Status:   Elaborating design EdgeBitCounter   ...  
+Status:   Elaborating design UART_TX   ...  
+Status:   Elaborating design ParityCalc  size=8 ...  
+Information: Created design named 'ParityCalc_size8'. (FE-LINK-13)
+Status:   Elaborating design Serializer  size=8 ...  
+Information: Created design named 'Serializer_size8'. (FE-LINK-13)
+Status:   Elaborating design MUX   ...  
+Status:   Elaborating design FSM_TX   ...  
+Status:   Elaborating design DataSync  BusWidth=8 ...  
+Information: Created design named 'DataSync_BusWidth8'. (FE-LINK-13)
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  381 unlinked power cell(s) with no power down functions on outputs.
+Warning:  87 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/SystemTop'
+Reference design set to 'Ref:/WORK/SystemTop'
+1
+## Reading Implementation Container
+read_db -container Imp $DWC_STD_DB
+Loading db file '/home/IC/Desktop/FinalProject/std_cells/NanGate/dbs/NangateOpenCellLibrary_fast.db'
+Created container 'Imp'
+Current container set to 'Imp'
+Loading db file '/home/IC/Desktop/FinalProject/std_cells/NanGate/dbs/NangateOpenCellLibrary_slow.db'
+Loading db file '/home/IC/Desktop/FinalProject/std_cells/NanGate/dbs/NangateOpenCellLibrary_typical.db'
+1
+read_verilog -container Imp "../Syn_preDFT/outputs/${design_name}.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Desktop/FinalProject/Syn_preDFT/outputs/SystemTop.v'
+1
+set_implementation_design $design_name
+Implementation design set to 'Imp:/WORK/SystemTop'
+1
+set_top $design_name
+Setting top design to 'Imp:/WORK/SystemTop'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  381 unlinked power cell(s) with no power down functions on outputs.
+Warning:  87 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/SystemTop'
+Implementation design set to 'Imp:/WORK/SystemTop'
+1
+## Match
+match
+Reference design is 'Ref:/WORK/SystemTop'
+Implementation design is 'Imp:/WORK/SystemTop'
+Status:  Checking designs...
+    Warning: 11 (15) undriven nets found in reference (implementation) design; see formality1.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+    Info:  Attempting to modify down-design of instance "DataSyncToTX" from design "DataSync_BusWidth8_0" to design "FM_uniq_48".
+    Info:  Attempting to modify down-design of instance "DataSyncToTX" from design "FM_uniq_48" to design "DataSync_BusWidth8_0".
+    Set don't verify point 'Ref:/WORK/SystemTop/SO[2]'
+    Set don't verify point 'Ref:/WORK/SystemTop/SO[1]'
+    Set don't verify point 'Ref:/WORK/SystemTop/SO[0]'
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          3          0          0          0          3
+instance_map        :         25          0          0          0         25
+mark                :         12          0          0          0         12
+multiplier          :          2          0          0          0          2
+reg_constant        :          1          0          0          0          1
+transformation
+   map              :          7          0          0          0          7
+   share            :          3          0          0          0          3
+uniquify            :          2          2          0          0          4
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      ../Syn_preDFT/SystemTop.svf
+
+SVF files produced:
+  /home/IC/Desktop/FinalProject/fm_preDFT/formality1_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 272 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 7 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 1(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+1
+## Verify
+verify
+Reference design is 'Ref:/WORK/SystemTop'
+Implementation design is 'Imp:/WORK/SystemTop'
+    
+*********************************** Matching Results ***********************************    
+ 272 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 7 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 1(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/SystemTop
+ Implementation design: Imp:/WORK/SystemTop
+ 272 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       1     271       0     272
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       3       0       0       3
+  Unread                       0       0       0       0       0       6       0       6
+****************************************************************************************
+1
+## Reports
+report_passing_points    > reports/${design_name}_passing_points.rpt
+report_failing_points    > reports/${design_name}_failing_points.rpt
+report_aborted_points    > reports/${design_name}_aborted_points.rpt
+report_unverified_points > reports/${design_name}_unverified_points.rpt
+fm_shell (verify)> 
